@@ -18,49 +18,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzi-db-Avo">
-                                <rect key="frame" x="30" y="9" width="540" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h93-Uo-ruj">
-                                <rect key="frame" x="30" y="79.5" width="540" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jo0-ch-55H">
-                                <rect key="frame" x="30" y="119.5" width="540" height="470.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enG-h8-hWU">
-                                <rect key="frame" x="30" y="49" width="540" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sGD-hf-K7e">
+                                <rect key="frame" x="30" y="49" width="560" height="101"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Meal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enG-h8-hWU">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h93-Uo-ruj">
+                                        <rect key="frame" x="0.0" y="31" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzi-db-Avo">
+                                        <rect key="frame" x="0.0" y="71" width="560" height="30"/>
+                                        <state key="normal" title="Set Default Label Text"/>
+                                        <connections>
+                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v3s-s6-Tcx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="h93-Uo-ruj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="DbH-Am-5mZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="h93-Uo-ruj" secondAttribute="trailing" constant="10" id="Es8-u8-Wok"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="enG-h8-hWU" secondAttribute="trailing" constant="10" id="JsV-kL-PAg"/>
-                            <constraint firstItem="jo0-ch-55H" firstAttribute="top" secondItem="h93-Uo-ruj" secondAttribute="bottom" constant="10" id="NpU-zh-sXc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xzi-db-Avo" secondAttribute="trailing" constant="10" id="PKl-I7-k9F"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jo0-ch-55H" secondAttribute="bottom" constant="10" id="dz1-BX-AQm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jo0-ch-55H" secondAttribute="trailing" constant="10" id="ev3-KU-edA"/>
-                            <constraint firstItem="h93-Uo-ruj" firstAttribute="top" secondItem="enG-h8-hWU" secondAttribute="bottom" constant="10" id="fFX-A2-g4j"/>
-                            <constraint firstItem="enG-h8-hWU" firstAttribute="top" secondItem="xzi-db-Avo" secondAttribute="bottom" constant="10" id="fRH-uC-Je0"/>
-                            <constraint firstItem="xzi-db-Avo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="9" id="gjh-he-kW5"/>
-                            <constraint firstItem="enG-h8-hWU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="pT9-Hs-xf2"/>
-                            <constraint firstItem="xzi-db-Avo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="vZ7-je-P7b"/>
-                            <constraint firstItem="jo0-ch-55H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="xAC-Ac-qu0"/>
+                            <constraint firstItem="sGD-hf-K7e" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="70f-or-vcV"/>
+                            <constraint firstItem="sGD-hf-K7e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Fs4-Ud-EaI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sGD-hf-K7e" secondAttribute="trailing" id="W4W-ii-WNJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mealNameLabel" destination="enG-h8-hWU" id="3RG-u6-vq8"/>
+                        <outlet property="nameTextField" destination="h93-Uo-ruj" id="XqJ-dF-pSU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="361"/>
         </scene>
     </scenes>
 </document>
